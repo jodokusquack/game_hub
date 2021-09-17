@@ -2,8 +2,6 @@
 @import "tailwindcss/components";
 
 // Add custom css files and styles here
-.my-class {
-    color: green;
-}
+@import "./test";
 
 @import "tailwindcss/utilities";
