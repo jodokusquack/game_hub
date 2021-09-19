@@ -1,37 +1,23 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
+<header class="lg:px-16 px-6 bg-white flex flex-wrap item-center lg:py-0 py-2">
+  <div class="flex-1 flex justify-between item-center">
     <%= link_to "Game Hub", root_path %>
-    <nav>
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed"
-                              data-toggle="collapse"
-                              data-target="#bs-example-navbar-collapse-1"
-                              aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
+  </div>
+    <label for="menu-toggle" class="cursor-pointer lg:hidden block">
+      <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
+    </label>
+    <input type="checkbox" class="hidden" id="menu-toggle" />
 
-      <ul class="nav navbar-nav navbar-right collapse navbar-collapse"
-          id="bs-example-navbar-collapse-1">
-        <li><%= link_to "Home",   root_path %></li>
-        <li><%= link_to "Help",   '#' %></li>
-        <li><%= link_to "Users", '#' %></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            Account <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu">
-            <li><%= link_to "Profile", '#' %></li>
-            <li><%= link_to "Settings", '#' %></li>
-            <li class="divider"></li>
-            <li>
-              <%= link_to "Log out", '#' %>
-            </li>
-          </ul>
-        </li>
+  <div class="hidden lg:flex lg:item-center lg:w-auto w-full" id="menu">
+    <nav>
+      <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
+        <li><%= link_to "Home", root_path, class: "nav-element" %></li>
+        <li><%= link_to "Games", '#', class: "nav-element" %></li>
+        <li><%= link_to "Help", '#', class: "nav-element" %></li>
+        <li><%= link_to "Log In", '#', class: "nav-element" %></li>
       </ul>
     </nav>
+    <a href="#" class="lg:ml-4 flex items-center justify-start lg:mb-0 mb-4 cursor-pointer">
+      <img src="https://www.gravatar.com/avatar/440b202c23244f59ea5b906b6869a837" class="rounded-full w-10 h-10 border-2 border-transparent hover:border-indigo-400" alt="Jakob Blaschke"/>
+    </a>
   </div>
 </header>
